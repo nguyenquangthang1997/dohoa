@@ -1,0 +1,46 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Medium : MonoBehaviour
+{
+    public GameObject big;
+    public int _count;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    void OnMouseDown()
+    {
+        Vector3 position = transform.position;
+        Destroy(this.gameObject);
+        Debug.Log("kill");
+        _count++;
+
+        //Vector3 position = new Vector3(1, 1, 1);
+        Quaternion rotation = new Quaternion(1, 1, 1, 1);
+        GameObject obj = Instantiate(big, position, rotation) as GameObject;
+
+
+    }
+    void OnTriggerEnter(Collider obj)
+    {
+        if (obj.name == "bullet")
+        {
+            Destroy(obj);
+            Vector3 position = transform.position;
+            Destroy(this.gameObject);
+            //Vector3 position = new Vector3(1, 1, 1);
+            Quaternion rotation = new Quaternion(1, 1, 1, 1);
+            GameObject obj1 = Instantiate(big, position, rotation) as GameObject;
+        }
+    }
+}
