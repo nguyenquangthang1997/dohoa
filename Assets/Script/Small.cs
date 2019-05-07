@@ -29,12 +29,11 @@ public class Small : MonoBehaviour
     }
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.name == "bullet")
+        if (obj.name == "bullet(Clone)")
         {
             Destroy(obj);
             Vector3 position = transform.position;
             Destroy(this.gameObject);
-            //Vector3 position = new Vector3(1, 1, 1);
             Quaternion rotation = new Quaternion(1, 1, 1, 1);
             GameObject obj1 = Instantiate(medium, position, rotation) as GameObject;
         }

@@ -38,14 +38,11 @@ public class Big : MonoBehaviour
     }
     void OnTriggerEnter(Collider obj)
     {
-        if (obj.name == "bullet")
+        if (obj.name == "bullet(Clone)")
         {
             Destroy(obj);
             Vector3 position = transform.position;
             Destroy(this.gameObject);
-            //Vector3 position = new Vector3(1, 1, 1);
-            Destroy(this.gameObject);
-            Debug.Log("kill");
             Quaternion rotation = new Quaternion(1, 1, 1, 1);
             Bullet b = bullet.GetComponent<Bullet>();
             b._rotation = 1;

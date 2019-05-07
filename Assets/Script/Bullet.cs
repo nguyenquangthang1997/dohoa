@@ -22,4 +22,9 @@ public class Bullet : MonoBehaviour
         else if (_rotation == -2) poisition = new Vector3(0, 0, -0.5f);
         this.transform.position += poisition;   
     }
+
+    void OnTriggerEnter(Collider obj)
+    {
+        Destroy(this.gameObject);
+    }
 }

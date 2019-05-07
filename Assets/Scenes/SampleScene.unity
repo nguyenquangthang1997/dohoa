@@ -256,13 +256,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 534669902}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.52, y: 2.02, z: -10}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 1.7, y: 32.5, z: 1.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &1038237568
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +277,7 @@ GameObject:
   - component: {fileID: 1038237569}
   - component: {fileID: 1038237573}
   - component: {fileID: 1038237574}
+  - component: {fileID: 1038237575}
   m_Layer: 0
   m_Name: medium
   m_TagString: Untagged
@@ -350,7 +351,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1038237568}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 4.01, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1478912377}
@@ -388,6 +389,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   big: {fileID: 1879251093}
+  _count: 0
+--- !u!54 &1038237575
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038237568}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1074021104
 GameObject:
   m_ObjectHideFlags: 0
@@ -402,6 +420,7 @@ GameObject:
   - component: {fileID: 1074021105}
   - component: {fileID: 1074021109}
   - component: {fileID: 1074021110}
+  - component: {fileID: 1074021111}
   m_Layer: 0
   m_Name: small
   m_TagString: Untagged
@@ -513,6 +532,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   medium: {fileID: 1038237568}
+  _count: 0
+--- !u!54 &1074021111
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1074021104}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1478912376
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,8 +670,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1717982969}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.5, y: 0, z: 6}
+  m_LocalScale: {x: 3, y: 1, z: 3}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 2
@@ -668,6 +704,7 @@ GameObject:
   - component: {fileID: 1788416111}
   - component: {fileID: 1788416110}
   - component: {fileID: 1788416114}
+  - component: {fileID: 1788416115}
   m_Layer: 0
   m_Name: bullet
   m_TagString: Untagged
@@ -760,6 +797,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _rotation: 0
+--- !u!54 &1788416115
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1788416109}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1879251093
 GameObject:
   m_ObjectHideFlags: 0
@@ -774,6 +827,7 @@ GameObject:
   - component: {fileID: 1879251094}
   - component: {fileID: 1879251098}
   - component: {fileID: 1879251099}
+  - component: {fileID: 1879251100}
   m_Layer: 0
   m_Name: big
   m_TagString: Untagged
@@ -847,7 +901,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1879251093}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2.45, y: 0, z: 0}
   m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children: []
   m_Father: {fileID: 1478912377}
@@ -885,3 +939,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 1788416109}
+  _count: 0
+--- !u!54 &1879251100
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1879251093}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
