@@ -7,6 +7,7 @@ using System.IO;
 public class Plane : MonoBehaviour
 {
     public GameObject small;
+    public static int click = 0;
     public GameObject medium;
     public GameObject big;
     static readonly string fileName = @"C:\Users\Dell\Documents\main1\Assets\map\map.txt";
@@ -48,27 +49,6 @@ public class Plane : MonoBehaviour
                 row = row+2;
             }
         }
-
-        //for (int i =0; i < 12; i++)
-        //{
-        //    for(int j = 0; j < 12; j++)
-        //    {
-        //        vector3 position = new vector3(i, 1, j);
-        //        quaternion rotation = new quaternion(1, 1, 1, 1);
-        //        gameobject obj = instantiate(small, position, rotation) as gameobject;
-        //    }
-        //}
-
-        //Vector3 position = new Vector3(2, 1, 1);
-        //Quaternion rotation = new Quaternion(1, 1, 1, 1);
-        //GameObject obj = Instantiate(small, position, rotation) as GameObject;
-
-        //position = new Vector3(3, 1, 1);
-        //GameObject obj1 = Instantiate(big, position, rotation) as GameObject;
-
-        //position = new Vector3(4, 1, 1);
-        //GameObject obj2 = Instantiate(medium, position, rotation) as GameObject;
-
     }
 
     void createGameObject(int i, int j, GameObject scale)
@@ -80,7 +60,6 @@ public class Plane : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
-
+        Debug.Log(click);
     }
 }

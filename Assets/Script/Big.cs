@@ -5,7 +5,6 @@ using UnityEngine;
 public class Big : MonoBehaviour
 {
     public GameObject bullet;
-    public int _count;
 
     // Start is called before the first frame update
     void Start()
@@ -20,10 +19,9 @@ public class Big : MonoBehaviour
     }
     void OnMouseDown()
     {
+        Plane.click++;
         Vector3 position = transform.position;
         Destroy(this.gameObject);
-        Debug.Log("kill");
-        _count++;
 
         Quaternion rotation = new Quaternion(1, 1, 1, 1);
         Bullet b = bullet.GetComponent<Bullet>();

@@ -5,7 +5,6 @@ using UnityEngine;
 public class Small : MonoBehaviour
 {
     public GameObject medium;
-    public int _count;
 
     // Start is called before the first frame update
     void Start()
@@ -20,9 +19,10 @@ public class Small : MonoBehaviour
     }
     void OnMouseDown()
     {
+        Plane.click++;
+
         Vector3 position = transform.position;
         Destroy(this.gameObject);
-        _count++;
         //Vector3 position = new Vector3(1, 1, 1);
         Quaternion rotation = new Quaternion(1, 1, 1, 1);
         GameObject obj = Instantiate(medium, position, rotation) as GameObject;
